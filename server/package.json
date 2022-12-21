@@ -1,0 +1,23 @@
+{
+  "name": "hackathon_22",
+  "version": "1.0.0",
+  "description": "Daily Status Reporting Project is broken up as 4 problem statements. You can implement as many working solutions for problem statements as you can. You can use same or different tech stack/languages for coding each problem statement.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Prajwal-W/hackathon_22.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Prajwal-W/hackathon_22/issues"
+  },
+  "homepage": "https://github.com/Prajwal-W/hackathon_22#readme",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2"
+  }
+}
