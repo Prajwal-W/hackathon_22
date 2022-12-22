@@ -1,0 +1,560 @@
+openapi: 3.0.0
+info:
+  title: DSR_Collection
+  version: 1.0.0
+servers:
+  - url: http://localhost:3000
+tags:
+  - name: User
+  - name: Project
+paths:
+  /api/user/signup:
+    post:
+      tags:
+        - User
+      summary: Register New User
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                Name: Abhijeet
+                Role: manager
+                Email: test@test
+                Password: abhi123
+      responses:
+        '201':
+          description: Created
+          headers:
+            X-Powered-By:
+              schema:
+                type: string
+                example: Express
+            Content-Type:
+              schema:
+                type: string
+                example: application/json; charset=utf-8
+            Content-Length:
+              schema:
+                type: integer
+                example: '393'
+            ETag:
+              schema:
+                type: string
+                example: W/"189-RY40Slk/iMHsAgj6eN8zaT5kxF8"
+            Date:
+              schema:
+                type: string
+                example: Thu, 22 Dec 2022 02:32:05 GMT
+            Connection:
+              schema:
+                type: string
+                example: keep-alive
+            Keep-Alive:
+              schema:
+                type: string
+                example: timeout=5
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                User:
+                  Name: Abhijeet
+                  Role: manager
+                  Email: test@test
+                  Password: $2b$10$fltIDwWdPmXuzG1aQYagXO8QnxlJrcKlj3H0HkcXkJdcwZjVVjfo.
+                  _id: 63a3c1a552b9a6a2c4b726a7
+                  __v: 0
+                message: User Created !
+                token: >-
+                  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6InRlc3RAdGVzdCIsImlkIjoiNjNhM2MxYTU1MmI5YTZhMmM0YjcyNmE3IiwiaWF0IjoxNjcxNjc2MzI1fQ.J-cLSzZLzHRr2EbAHaLh97Hh1Pn1zBwKDgXYAyFYbGE
+        '400':
+          description: Bad Request
+          headers:
+            X-Powered-By:
+              schema:
+                type: string
+                example: Express
+            Content-Type:
+              schema:
+                type: string
+                example: application/json; charset=utf-8
+            Content-Length:
+              schema:
+                type: integer
+                example: '33'
+            ETag:
+              schema:
+                type: string
+                example: W/"21-iGErLku/9taeeOQN+9qwFgLXnuo"
+            Date:
+              schema:
+                type: string
+                example: Thu, 22 Dec 2022 06:44:15 GMT
+            Connection:
+              schema:
+                type: string
+                example: keep-alive
+            Keep-Alive:
+              schema:
+                type: string
+                example: timeout=5
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                message: User already exists
+  /api/user/signin:
+    get:
+      tags:
+        - User
+      summary: Login User
+      responses:
+        '201':
+          description: Created
+          headers:
+            X-Powered-By:
+              schema:
+                type: string
+                example: Express
+            Content-Type:
+              schema:
+                type: string
+                example: application/json; charset=utf-8
+            Content-Length:
+              schema:
+                type: integer
+                example: '393'
+            ETag:
+              schema:
+                type: string
+                example: W/"189-f/9tWHQVDBLb8lCU3ARqyy1I388"
+            Date:
+              schema:
+                type: string
+                example: Thu, 22 Dec 2022 06:46:34 GMT
+            Connection:
+              schema:
+                type: string
+                example: keep-alive
+            Keep-Alive:
+              schema:
+                type: string
+                example: timeout=5
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                User:
+                  _id: 63a3fd45dd73f9e86c7ac2a5
+                  Name: Abhijeet
+                  Role: manager
+                  Email: test@test
+                  Password: $2b$10$ULtOxD1EaEWwEML5k/Zo5O/TMqupBlCHXoAAAF7keDJFoDAAEQSQi
+                  __v: 0
+                message: User Created !
+                token: >-
+                  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6InRlc3RAdGVzdCIsImlkIjoiNjNhM2ZkNDVkZDczZjllODZjN2FjMmE1IiwiaWF0IjoxNjcxNjkxNTk0fQ.5p8RQERQrQ1c1ot_NaF5pt4jyIsor8JcKaP7NJRnmyk
+        '400':
+          description: Bad Request
+          headers:
+            X-Powered-By:
+              schema:
+                type: string
+                example: Express
+            Content-Type:
+              schema:
+                type: string
+                example: application/json; charset=utf-8
+            Content-Length:
+              schema:
+                type: integer
+                example: '33'
+            ETag:
+              schema:
+                type: string
+                example: W/"21-10Yc7UhEvgvMDtpQHJBDqUZFnuA"
+            Date:
+              schema:
+                type: string
+                example: Thu, 22 Dec 2022 02:32:27 GMT
+            Connection:
+              schema:
+                type: string
+                example: keep-alive
+            Keep-Alive:
+              schema:
+                type: string
+                example: timeout=5
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                message: Invalid Credentials
+  /api/project/all:
+    get:
+      tags:
+        - Project
+      summary: Get all Projects of all users
+      parameters:
+        - name: Authorization
+          in: header
+          schema:
+            type: string
+          example: >-
+            Bearer
+            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6InRlc3RAdGVzdCIsImlkIjoiNjNhM2ZkNDVkZDczZjllODZjN2FjMmE1IiwiaWF0IjoxNjcxNzA1NzA5fQ.I5hs1R0wPGZW_UD3jrQTy9emVklOXOQn6lpEoKNS2o4
+      responses:
+        '200':
+          description: OK
+          headers:
+            X-Powered-By:
+              schema:
+                type: string
+                example: Express
+            Content-Type:
+              schema:
+                type: string
+                example: application/json; charset=utf-8
+            Content-Length:
+              schema:
+                type: integer
+                example: '940'
+            ETag:
+              schema:
+                type: string
+                example: W/"3ac-iJuj3x9zVNSwGEzZMdnzbDhuudM"
+            Date:
+              schema:
+                type: string
+                example: Thu, 22 Dec 2022 10:21:30 GMT
+            Connection:
+              schema:
+                type: string
+                example: keep-alive
+            Keep-Alive:
+              schema:
+                type: string
+                example: timeout=5
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                message: Fetched all 5 projects
+                Projects:
+                  - _id: 63a4216bcf020f61a644e4aa
+                    ProjectName: Project 1
+                    ProjectStartDate: '2022-12-22T08:02:56.000Z'
+                    ProjectMangerName: Abhijeet
+                    ProjectMangerEmail: test@test
+                    __v: 0
+                  - _id: 63a422eb00cc6703f3a09e82
+                    ProjectName: Project 2
+                    ProjectStartDate: '2022-12-22T08:02:56.000Z'
+                    ProjectMangerName: Abhijeet
+                    ProjectMangerEmail: test@test
+                    __v: 0
+                  - _id: 63a4230eb16fa371c421b661
+                    ProjectName: Project 3
+                    ProjectStartDate: '2022-12-22T08:02:56.000Z'
+                    ProjectMangerName: Abhijeet
+                    ProjectMangerEmail: test@test
+                    __v: 0
+                  - _id: 63a4232a48cfaf5ca0bc6a2a
+                    ProjectName: Project 4
+                    ProjectStartDate: '2022-12-22T08:02:56.000Z'
+                    ProjectMangerName: Abhijeet
+                    ProjectMangerEmail: test@test
+                    __v: 0
+                  - _id: 63a4237ff7e817fee8629469
+                    ProjectName: Project 4a
+                    ProjectStartDate: '2022-12-22T08:02:56.000Z'
+                    ProjectMangerName: Ab
+                    ProjectMangerEmail: test@testt
+                    __v: 0
+  /api/project/:
+    get:
+      tags:
+        - Project
+      summary: Get all Projects of current User
+      parameters:
+        - name: Authorization
+          in: header
+          schema:
+            type: string
+          example: >-
+            Bearer
+            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6InRlc3RAdGVzdCIsImlkIjoiNjNhM2ZkNDVkZDczZjllODZjN2FjMmE1IiwiaWF0IjoxNjcxNzA0NzMxfQ.my_GVKfpeJpMi4j2DsOVfog4IJ3nq2bBBmAtdi1QMEA
+      responses:
+        '200':
+          description: OK
+          headers:
+            X-Powered-By:
+              schema:
+                type: string
+                example: Express
+            Content-Type:
+              schema:
+                type: string
+                example: application/json; charset=utf-8
+            Content-Length:
+              schema:
+                type: integer
+                example: '224'
+            ETag:
+              schema:
+                type: string
+                example: W/"e0-mjMtY5J1OD2orwZdC3hhVRKuYGA"
+            Date:
+              schema:
+                type: string
+                example: Thu, 22 Dec 2022 10:21:51 GMT
+            Connection:
+              schema:
+                type: string
+                example: keep-alive
+            Keep-Alive:
+              schema:
+                type: string
+                example: timeout=5
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                message: Fetched all 1 projects
+                Projects:
+                  - _id: 63a4237ff7e817fee8629469
+                    ProjectName: Project 4a
+                    ProjectStartDate: '2022-12-22T08:02:56.000Z'
+                    ProjectMangerName: Ab
+                    ProjectMangerEmail: test@testt
+                    __v: 0
+    post:
+      tags:
+        - Project
+      summary: Create New Project
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                ProjectName: Project 1
+                ProjectStartDate: Thu Dec 22 2022 13:32:56 GMT+0530 (India Standard Time)
+      parameters:
+        - name: Authorization
+          in: header
+          schema:
+            type: string
+          example: >-
+            Bearer
+            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6InRlc3RAdGVzdHQiLCJpZCI6IjYzYTQxZjE1Mjc0YzRhZGY1ZWEwYWZkNCIsImlhdCI6MTY3MTcwMDc4MH0.R-8BympfsUb4WNl1vYLCRNtEyFCW4ZD3iLOB025NF7M
+      responses:
+        '201':
+          description: Created
+          headers:
+            X-Powered-By:
+              schema:
+                type: string
+                example: Express
+            Content-Type:
+              schema:
+                type: string
+                example: application/json; charset=utf-8
+            Content-Length:
+              schema:
+                type: integer
+                example: '226'
+            ETag:
+              schema:
+                type: string
+                example: W/"e2-GfVMQLHqfGopXjkI0ArFu+7aqMA"
+            Date:
+              schema:
+                type: string
+                example: Thu, 22 Dec 2022 10:36:14 GMT
+            Connection:
+              schema:
+                type: string
+                example: keep-alive
+            Keep-Alive:
+              schema:
+                type: string
+                example: timeout=5
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                message: Project Project 1 Created
+                newProject:
+                  ProjectName: Project 1
+                  ProjectStartDate: '2022-12-22T08:02:56.000Z'
+                  ProjectMangerName: Ab
+                  ProjectMangerEmail: test@testt
+                  _id: 63a4331e2526c7a00441f208
+                  __v: 0
+  /api/project/63a4331e2526c7a00441f208:
+    delete:
+      tags:
+        - Project
+      summary: Delete Project by id
+      parameters:
+        - name: Authorization
+          in: header
+          schema:
+            type: string
+          example: >-
+            Bearer
+            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6InRlc3RAdGVzdCIsImlkIjoiNjNhM2ZkNDVkZDczZjllODZjN2FjMmE1IiwiaWF0IjoxNjcxNzA0NzMxfQ.my_GVKfpeJpMi4j2DsOVfog4IJ3nq2bBBmAtdi1QMEA
+      responses:
+        '202':
+          description: Accepted
+          headers:
+            X-Powered-By:
+              schema:
+                type: string
+                example: Express
+            Content-Type:
+              schema:
+                type: string
+                example: application/json; charset=utf-8
+            Content-Length:
+              schema:
+                type: integer
+                example: '238'
+            ETag:
+              schema:
+                type: string
+                example: W/"ee-Q+vFqDFWYycG0fJULfQC8uxdQwU"
+            Date:
+              schema:
+                type: string
+                example: Thu, 22 Dec 2022 10:37:14 GMT
+            Connection:
+              schema:
+                type: string
+                example: keep-alive
+            Keep-Alive:
+              schema:
+                type: string
+                example: timeout=5
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                message: Project 63a4331e2526c7a00441f208 Deleted
+                project:
+                  _id: 63a4331e2526c7a00441f208
+                  ProjectName: Project 1
+                  ProjectStartDate: '2022-12-22T08:02:56.000Z'
+                  ProjectMangerName: Ab
+                  ProjectMangerEmail: test@testt
+                  __v: 0
+        '404':
+          description: Not Found
+          headers:
+            X-Powered-By:
+              schema:
+                type: string
+                example: Express
+            Content-Type:
+              schema:
+                type: string
+                example: application/json; charset=utf-8
+            Content-Length:
+              schema:
+                type: integer
+                example: '56'
+            ETag:
+              schema:
+                type: string
+                example: W/"38-NC9VPxbWnhOwg3xHib24Q514+Ag"
+            Date:
+              schema:
+                type: string
+                example: Thu, 22 Dec 2022 10:31:42 GMT
+            Connection:
+              schema:
+                type: string
+                example: keep-alive
+            Keep-Alive:
+              schema:
+                type: string
+                example: timeout=5
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                message: Project 63a422eb00cc6703f3a09e82 not found
+    put:
+      tags:
+        - Project
+      summary: Update Project by id
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                ProjectName: Project 10
+      parameters:
+        - name: Authorization
+          in: header
+          schema:
+            type: string
+          example: >-
+            Bearer
+            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6InRlc3RAdGVzdCIsImlkIjoiNjNhM2ZkNDVkZDczZjllODZjN2FjMmE1IiwiaWF0IjoxNjcxNzA0NzMxfQ.my_GVKfpeJpMi4j2DsOVfog4IJ3nq2bBBmAtdi1QMEA
+      responses:
+        '200':
+          description: OK
+          headers:
+            X-Powered-By:
+              schema:
+                type: string
+                example: Express
+            Content-Type:
+              schema:
+                type: string
+                example: application/json; charset=utf-8
+            Content-Length:
+              schema:
+                type: integer
+                example: '193'
+            ETag:
+              schema:
+                type: string
+                example: W/"c1-M/jkIwfVBQGKwA7Wakb8ERzdufY"
+            Date:
+              schema:
+                type: string
+                example: Thu, 22 Dec 2022 10:39:41 GMT
+            Connection:
+              schema:
+                type: string
+                example: keep-alive
+            Keep-Alive:
+              schema:
+                type: string
+                example: timeout=5
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                message: Project 63a4331e2526c7a00441f208 Updated
+                newProject:
+                  ProjectName: Project 10
+                  ProjectMangerName: Abhijeet
+                  ProjectMangerEmail: test@test
+                  _id: 63a433ed8c163fa81e7b77ba

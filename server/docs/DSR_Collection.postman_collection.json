@@ -1,0 +1,924 @@
+{
+	"info": {
+		"_postman_id": "126516eb-9610-42cd-877a-13e14cea86e6",
+		"name": "DSR_Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Register New User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Name\": \"Abhijeet\",\r\n    \"Role\": \"manager\",\r\n    \"Email\": \"test@test\",\r\n    \"Password\": \"abhi123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/user/signup",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"user",
+								"signup"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Register New User",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"Name\": \"Abhijeet\",\r\n    \"Role\": \"manager\",\r\n    \"Email\": \"test@test\",\r\n    \"Password\": \"abhi123\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/user/signup",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"user",
+										"signup"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "393"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"189-RY40Slk/iMHsAgj6eN8zaT5kxF8\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 22 Dec 2022 02:32:05 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"User\": {\n        \"Name\": \"Abhijeet\",\n        \"Role\": \"manager\",\n        \"Email\": \"test@test\",\n        \"Password\": \"$2b$10$fltIDwWdPmXuzG1aQYagXO8QnxlJrcKlj3H0HkcXkJdcwZjVVjfo.\",\n        \"_id\": \"63a3c1a552b9a6a2c4b726a7\",\n        \"__v\": 0\n    },\n    \"message\": \"User Created !\",\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6InRlc3RAdGVzdCIsImlkIjoiNjNhM2MxYTU1MmI5YTZhMmM0YjcyNmE3IiwiaWF0IjoxNjcxNjc2MzI1fQ.J-cLSzZLzHRr2EbAHaLh97Hh1Pn1zBwKDgXYAyFYbGE\"\n}"
+						},
+						{
+							"name": "Register New User",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"Name\": \"Abhijeet\",\r\n    \"Role\": \"manager\",\r\n    \"Email\": \"test@test\",\r\n    \"Password\": \"abhi123\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/user/signup",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"user",
+										"signup"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "33"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"21-iGErLku/9taeeOQN+9qwFgLXnuo\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 22 Dec 2022 06:44:15 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"User already exists\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Login User",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Email\": \"test@test\",\r\n    \"Password\": \"abhi123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/user/signin",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"user",
+								"signin"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Login User",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"Email\": \"test@test\",\r\n    \"Password\": \"abhi123\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/user/signin",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"user",
+										"signin"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "33"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"21-10Yc7UhEvgvMDtpQHJBDqUZFnuA\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 22 Dec 2022 02:32:27 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Invalid Credentials\"\n}"
+						},
+						{
+							"name": "Login User",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"Email\": \"test@test\",\r\n    \"Password\": \"abhi123\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/user/signin",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"user",
+										"signin"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "393"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"189-f/9tWHQVDBLb8lCU3ARqyy1I388\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 22 Dec 2022 06:46:34 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"User\": {\n        \"_id\": \"63a3fd45dd73f9e86c7ac2a5\",\n        \"Name\": \"Abhijeet\",\n        \"Role\": \"manager\",\n        \"Email\": \"test@test\",\n        \"Password\": \"$2b$10$ULtOxD1EaEWwEML5k/Zo5O/TMqupBlCHXoAAAF7keDJFoDAAEQSQi\",\n        \"__v\": 0\n    },\n    \"message\": \"User Created !\",\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6InRlc3RAdGVzdCIsImlkIjoiNjNhM2ZkNDVkZDczZjllODZjN2FjMmE1IiwiaWF0IjoxNjcxNjkxNTk0fQ.5p8RQERQrQ1c1ot_NaF5pt4jyIsor8JcKaP7NJRnmyk\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Project",
+			"item": [
+				{
+					"name": "Get all Projects of all users",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6InRlc3RAdGVzdCIsImlkIjoiNjNhM2ZkNDVkZDczZjllODZjN2FjMmE1IiwiaWF0IjoxNjcxNzA1NzA5fQ.I5hs1R0wPGZW_UD3jrQTy9emVklOXOQn6lpEoKNS2o4",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ProjectName\": \"Project 1\",\r\n    \"ProjectStartDate\": \"Thu Dec 22 2022 13:32:56 GMT+0530 (India Standard Time)\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/project/all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"project",
+								"all"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get all Projects of all users",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6InRlc3RAdGVzdHQiLCJpZCI6IjYzYTQxZjE1Mjc0YzRhZGY1ZWEwYWZkNCIsImlhdCI6MTY3MTcwMTM5NX0.vt_Us45vGEsHD_3PUuzp5TPRrYGfr0yaIYggHquz3bQ",
+										"type": "default"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"ProjectName\": \"Project 1\",\r\n    \"ProjectStartDate\": \"Thu Dec 22 2022 13:32:56 GMT+0530 (India Standard Time)\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/project/all",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"project",
+										"all"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "940"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"3ac-iJuj3x9zVNSwGEzZMdnzbDhuudM\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 22 Dec 2022 10:21:30 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Fetched all 5 projects\",\n    \"Projects\": [\n        {\n            \"_id\": \"63a4216bcf020f61a644e4aa\",\n            \"ProjectName\": \"Project 1\",\n            \"ProjectStartDate\": \"2022-12-22T08:02:56.000Z\",\n            \"ProjectMangerName\": \"Abhijeet\",\n            \"ProjectMangerEmail\": \"test@test\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"63a422eb00cc6703f3a09e82\",\n            \"ProjectName\": \"Project 2\",\n            \"ProjectStartDate\": \"2022-12-22T08:02:56.000Z\",\n            \"ProjectMangerName\": \"Abhijeet\",\n            \"ProjectMangerEmail\": \"test@test\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"63a4230eb16fa371c421b661\",\n            \"ProjectName\": \"Project 3\",\n            \"ProjectStartDate\": \"2022-12-22T08:02:56.000Z\",\n            \"ProjectMangerName\": \"Abhijeet\",\n            \"ProjectMangerEmail\": \"test@test\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"63a4232a48cfaf5ca0bc6a2a\",\n            \"ProjectName\": \"Project 4\",\n            \"ProjectStartDate\": \"2022-12-22T08:02:56.000Z\",\n            \"ProjectMangerName\": \"Abhijeet\",\n            \"ProjectMangerEmail\": \"test@test\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"63a4237ff7e817fee8629469\",\n            \"ProjectName\": \"Project 4a\",\n            \"ProjectStartDate\": \"2022-12-22T08:02:56.000Z\",\n            \"ProjectMangerName\": \"Ab\",\n            \"ProjectMangerEmail\": \"test@testt\",\n            \"__v\": 0\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Get all Projects of current User",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6InRlc3RAdGVzdCIsImlkIjoiNjNhM2ZkNDVkZDczZjllODZjN2FjMmE1IiwiaWF0IjoxNjcxNzA0NzMxfQ.my_GVKfpeJpMi4j2DsOVfog4IJ3nq2bBBmAtdi1QMEA",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ProjectName\": \"Project 1\",\r\n    \"ProjectStartDate\": \"Thu Dec 22 2022 13:32:56 GMT+0530 (India Standard Time)\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/project/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"project",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get all Projects of current User",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6InRlc3RAdGVzdHQiLCJpZCI6IjYzYTQxZjE1Mjc0YzRhZGY1ZWEwYWZkNCIsImlhdCI6MTY3MTcwMTM5NX0.vt_Us45vGEsHD_3PUuzp5TPRrYGfr0yaIYggHquz3bQ",
+										"type": "default"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"ProjectName\": \"Project 1\",\r\n    \"ProjectStartDate\": \"Thu Dec 22 2022 13:32:56 GMT+0530 (India Standard Time)\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/project/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"project",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "224"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"e0-mjMtY5J1OD2orwZdC3hhVRKuYGA\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 22 Dec 2022 10:21:51 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Fetched all 1 projects\",\n    \"Projects\": [\n        {\n            \"_id\": \"63a4237ff7e817fee8629469\",\n            \"ProjectName\": \"Project 4a\",\n            \"ProjectStartDate\": \"2022-12-22T08:02:56.000Z\",\n            \"ProjectMangerName\": \"Ab\",\n            \"ProjectMangerEmail\": \"test@testt\",\n            \"__v\": 0\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Create New Project",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6InRlc3RAdGVzdHQiLCJpZCI6IjYzYTQxZjE1Mjc0YzRhZGY1ZWEwYWZkNCIsImlhdCI6MTY3MTcwMDc4MH0.R-8BympfsUb4WNl1vYLCRNtEyFCW4ZD3iLOB025NF7M",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ProjectName\": \"Project 1\",\r\n    \"ProjectStartDate\": \"Thu Dec 22 2022 13:32:56 GMT+0530 (India Standard Time)\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/project/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"project",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create New Project",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6InRlc3RAdGVzdHQiLCJpZCI6IjYzYTQxZjE1Mjc0YzRhZGY1ZWEwYWZkNCIsImlhdCI6MTY3MTcwMDc4MH0.R-8BympfsUb4WNl1vYLCRNtEyFCW4ZD3iLOB025NF7M",
+										"type": "default"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"ProjectName\": \"Project 1\",\r\n    \"ProjectStartDate\": \"Thu Dec 22 2022 13:32:56 GMT+0530 (India Standard Time)\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/project/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"project",
+										""
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "226"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"e2-GfVMQLHqfGopXjkI0ArFu+7aqMA\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 22 Dec 2022 10:36:14 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Project Project 1 Created\",\n    \"newProject\": {\n        \"ProjectName\": \"Project 1\",\n        \"ProjectStartDate\": \"2022-12-22T08:02:56.000Z\",\n        \"ProjectMangerName\": \"Ab\",\n        \"ProjectMangerEmail\": \"test@testt\",\n        \"_id\": \"63a4331e2526c7a00441f208\",\n        \"__v\": 0\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Project by id",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6InRlc3RAdGVzdCIsImlkIjoiNjNhM2ZkNDVkZDczZjllODZjN2FjMmE1IiwiaWF0IjoxNjcxNzA0NzMxfQ.my_GVKfpeJpMi4j2DsOVfog4IJ3nq2bBBmAtdi1QMEA",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/api/project/63a4331e2526c7a00441f208",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"project",
+								"63a4331e2526c7a00441f208"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Delete project by id",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6InRlc3RAdGVzdCIsImlkIjoiNjNhM2ZkNDVkZDczZjllODZjN2FjMmE1IiwiaWF0IjoxNjcxNzA0NzMxfQ.my_GVKfpeJpMi4j2DsOVfog4IJ3nq2bBBmAtdi1QMEA",
+										"type": "default"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:3000/api/project/63a4331e2526c7a00441f208",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"project",
+										"63a4331e2526c7a00441f208"
+									]
+								}
+							},
+							"status": "Accepted",
+							"code": 202,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "238"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"ee-Q+vFqDFWYycG0fJULfQC8uxdQwU\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 22 Dec 2022 10:37:14 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Project 63a4331e2526c7a00441f208 Deleted\",\n    \"project\": {\n        \"_id\": \"63a4331e2526c7a00441f208\",\n        \"ProjectName\": \"Project 1\",\n        \"ProjectStartDate\": \"2022-12-22T08:02:56.000Z\",\n        \"ProjectMangerName\": \"Ab\",\n        \"ProjectMangerEmail\": \"test@testt\",\n        \"__v\": 0\n    }\n}"
+						},
+						{
+							"name": "Delete project by id",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6InRlc3RAdGVzdCIsImlkIjoiNjNhM2ZkNDVkZDczZjllODZjN2FjMmE1IiwiaWF0IjoxNjcxNzA0NzMxfQ.my_GVKfpeJpMi4j2DsOVfog4IJ3nq2bBBmAtdi1QMEA",
+										"type": "default"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:3000/api/project/63a422eb00cc6703f3a09e82",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"project",
+										"63a422eb00cc6703f3a09e82"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "56"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"38-NC9VPxbWnhOwg3xHib24Q514+Ag\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 22 Dec 2022 10:31:42 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Project 63a422eb00cc6703f3a09e82 not found\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Project by id",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6InRlc3RAdGVzdCIsImlkIjoiNjNhM2ZkNDVkZDczZjllODZjN2FjMmE1IiwiaWF0IjoxNjcxNzA0NzMxfQ.my_GVKfpeJpMi4j2DsOVfog4IJ3nq2bBBmAtdi1QMEA",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ProjectName\": \"Project 10\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/project/63a4331e2526c7a00441f208",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"project",
+								"63a4331e2526c7a00441f208"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update Project by id",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6InRlc3RAdGVzdCIsImlkIjoiNjNhM2ZkNDVkZDczZjllODZjN2FjMmE1IiwiaWF0IjoxNjcxNzA0NzMxfQ.my_GVKfpeJpMi4j2DsOVfog4IJ3nq2bBBmAtdi1QMEA",
+										"type": "default"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"ProjectName\": \"Project 10\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/project/63a4331e2526c7a00441f208",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"project",
+										"63a4331e2526c7a00441f208"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "193"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"c1-M/jkIwfVBQGKwA7Wakb8ERzdufY\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 22 Dec 2022 10:39:41 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Project 63a4331e2526c7a00441f208 Updated\",\n    \"newProject\": {\n        \"ProjectName\": \"Project 10\",\n        \"ProjectMangerName\": \"Abhijeet\",\n        \"ProjectMangerEmail\": \"test@test\",\n        \"_id\": \"63a433ed8c163fa81e7b77ba\"\n    }\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}
