@@ -6,6 +6,7 @@ const swaggerDocument = YAML.load("./swagger.yaml");
 const mongoose = require("mongoose");
 
 const userRoutes = require("./routes/user");
+const projectRoutes = require("./routes/project");
 
 dotenv.config();
 
@@ -21,6 +22,7 @@ app.use((req, res, next) => {
 app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 app.use("/api/user", userRoutes);
+app.use("/api/project", projectRoutes);
 
 app.get("/", (req, res, next) => {
   res.send("Hello World!");
@@ -45,5 +47,5 @@ mongoose
     });
   })
   .catch((err) => {
-    console.log(err);
+    // console.log(err);
   });

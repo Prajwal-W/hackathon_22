@@ -56,7 +56,7 @@ const signinUser = async (req, res, next) => {
 
     res
       .status(201)
-      .json({ User: existingUser, message: "User Created !", token: token });
+      .json({ User: existingUser, message: "User Logged in !", token: token });
   } catch (err) {
     const error = new Error(err);
     error.httpStatusCode = 500;
