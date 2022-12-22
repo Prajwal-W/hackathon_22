@@ -1,0 +1,67 @@
+const User = require("../models/user.model");
+const bcrypt = require("bcrypt");
+const jwt = require("jsonwebtoken");
+
+// Create a new User
+const registerUser = async (req, res, next) => {
+  // Create a new User with the appropriate Schema
+  const { Name, Role, Email, Password } = req.body;
+  try {
+    const existingUser = await User.findOne({ Email: Email });
+    if (existingUser) {
+      return res.status(400).json({ message: "User already exists" });
+    }
+
+    const hashedPassword = await bcrypt.hash(Password, 10);
+
+    const result = await User.create({
+      Email: Email,
+      Password: hashedPassword,
+      Name: Name,
+      Role: Role,
+    });
+
+    const token = jwt.sign(
+      { Email: result.Email, id: result._id },
+      process.env.SECRET_KEY
+    );
+    res
+      .status(201)
+      .json({ User: result, message: "User Created !", token: token });
+  } catch (err) {
+    const error = new Error(err);
+    error.httpStatusCode = 500;
+    next(error);
+  }
+};
+
+const signinUser = async (req, res, next) => {
+  const { Email, Password } = req.body;
+  try {
+    const existingUser = await User.findOne({ Email: Email });
+    if (!existingUser) {
+      return res.status(404).json({ message: "User not Found" });
+    }
+
+    const matchPassword = await bcrypt.compare(Password, existingUser.Password);
+
+    if (!matchPassword) {
+      return res.status(400).json({ message: "Invalid Credentials" });
+    }
+
+    const token = jwt.sign(
+      { Email: existingUser.Email, id: existingUser._id },
+      process.env.SECRET_KEY
+    );
+
+    res
+      .status(201)
+      .json({ User: existingUser, message: "User Created !", token: token });
+  } catch (err) {
+    const error = new Error(err);
+    error.httpStatusCode = 500;
+    next(error);
+  }
+};
+
+module.exports = { registerUser, signinUser };
