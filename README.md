@@ -1,6 +1,6 @@
 # hackathon_22
 
-# Daily Status Reporting Project
+# Daily Status Reporting Project - Team Binary Brains
 
 Daily Status Reporting Project is broken up as 4 problem statements. You can implement as many working solutions for problem statements as you can. You can use same or different tech stack/languages for coding each problem statement.
 
