@@ -4,7 +4,8 @@
   "description": "Daily Status Reporting Project is broken up as 4 problem statements. You can implement as many working solutions for problem statements as you can. You can use same or different tech stack/languages for coding each problem statement.",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon ."
+    "dev": "nodemon .",
+    "start": "node ."
   },
   "repository": {
     "type": "git",
