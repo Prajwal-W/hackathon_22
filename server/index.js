@@ -7,6 +7,7 @@ const mongoose = require("mongoose");
 
 const userRoutes = require("./routes/user");
 const projectRoutes = require("./routes/project");
+const teamRoutes = require("./routes/team");
 
 dotenv.config();
 
@@ -26,6 +27,7 @@ app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 app.use("/api/user", userRoutes);
 app.use("/api/project", projectRoutes);
+app.use("/api/team", teamRoutes);
 
 app.get("/", (req, res, next) => {
   res.send("Hello World!");
