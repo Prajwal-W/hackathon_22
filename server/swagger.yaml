@@ -3,8 +3,8 @@ info:
   title: DSR_Collection
   version: 1.0.0
 servers:
-  - url: http://localhost:3000
   - url: https://dsr-z8f3.onrender.com
+  - url: http://localhost:3000
 tags:
   - name: User
   - name: Project
