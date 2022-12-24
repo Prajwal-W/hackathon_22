@@ -16,4 +16,7 @@ router.get("/all", userController.allUsers);
 //GET all Members
 router.get("/members", userController.allMembers);
 
+//GET all Managers
+router.get("/managers", userController.allManagers);
+
 module.exports = router;
