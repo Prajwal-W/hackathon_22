@@ -13,4 +13,7 @@ router.get("/signin", userController.signinUser);
 //GET all users
 router.get("/all", userController.allUsers);
 
+//GET all Members
+router.get("/members", userController.allMembers);
+
 module.exports = router;
