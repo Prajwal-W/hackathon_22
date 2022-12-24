@@ -4,7 +4,7 @@ const {
   createTeam,
   updateTeam,
   deleteTeam,
-} = require("../controllers/Team.controller");
+} = require("../controllers/team.controller");
 
 const router = express.Router();
 
