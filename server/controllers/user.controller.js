@@ -64,4 +64,19 @@ const signinUser = async (req, res, next) => {
   }
 };
 
-module.exports = { registerUser, signinUser };
+const allUsers = async (req, res, next) => {
+  try {
+    const Users = await User.find().select('-Password');
+    if (!Users) {
+      return res.status(404).json({ message: "Users not Found" });
+    }
+
+    res.status(200).json({ message: `${Users.length} Users Found`, Users });
+  } catch (err) {
+    const error = new Error(err);
+    error.httpStatusCode = 500;
+    next(error);
+  }
+};
+
+module.exports = { registerUser, signinUser, allUsers };
