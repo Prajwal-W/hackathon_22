@@ -64,4 +64,55 @@ const signinUser = async (req, res, next) => {
   }
 };
 
-module.exports = { registerUser, signinUser };
+const allUsers = async (req, res, next) => {
+  try {
+    const Users = await User.find().select("-Password");
+    if (!Users) {
+      return res.status(404).json({ message: "Users not Found" });
+    }
+
+    res.status(200).json({ message: `${Users.length} Users Found`, Users });
+  } catch (err) {
+    const error = new Error(err);
+    error.httpStatusCode = 500;
+    next(error);
+  }
+};
+
+const allMembers = async (req, res, next) => {
+  try {
+    const Members = await User.find({ Role: "member" }).select("-Password");
+    if (!Members) {
+      return res.status(404).json({ message: "Members not Found" });
+    }
+
+    res.status(200).json({ message: `${Members.length} Members Found`, Members });
+  } catch (err) {
+    const error = new Error(err);
+    error.httpStatusCode = 500;
+    next(error);
+  }
+};
+
+const allManagers = async (req, res, next) => {
+  try {
+    const Managers = await User.find({ Role: "manager" }).select("-Password");
+    if (!Managers) {
+      return res.status(404).json({ message: "Managers not Found" });
+    }
+
+    res.status(200).json({ message: `${Managers.length} Managers Found`, Managers });
+  } catch (err) {
+    const error = new Error(err);
+    error.httpStatusCode = 500;
+    next(error);
+  }
+};
+
+module.exports = {
+  registerUser,
+  signinUser,
+  allUsers,
+  allMembers,
+  allManagers,
+};
