@@ -7,6 +7,7 @@ servers:
 tags:
   - name: User
   - name: Project
+  - name: Team
 paths:
   /api/user/signup:
     post:
@@ -196,6 +197,334 @@ paths:
                 type: object
               example:
                 message: Invalid Credentials
+  /api/user/all:
+    get:
+      tags:
+        - User
+      summary: All Users
+      responses:
+        '200':
+          description: OK
+          headers:
+            X-Powered-By:
+              schema:
+                type: string
+                example: Express
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: '*'
+            Access-Control-Allow-Methods:
+              schema:
+                type: string
+                example: GET, POST
+            Access-Control-Allow-Headers:
+              schema:
+                type: string
+                example: Content-Type, Authorization
+            Content-Type:
+              schema:
+                type: string
+                example: application/json; charset=utf-8
+            Content-Length:
+              schema:
+                type: integer
+                example: '1542'
+            ETag:
+              schema:
+                type: string
+                example: W/"606-xS316vxGldtz1wWiNbbhR8Mc6+Y"
+            Date:
+              schema:
+                type: string
+                example: Sat, 24 Dec 2022 11:51:28 GMT
+            Connection:
+              schema:
+                type: string
+                example: keep-alive
+            Keep-Alive:
+              schema:
+                type: string
+                example: timeout=5
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                message: 16 Users Found
+                Users:
+                  - _id: 63a4395ead787e5a34c76399
+                    Name: Abhijeet
+                    Role: manager
+                    Email: test@test
+                    __v: 0
+                  - _id: 63a45118e916ce60a0c9b8ed
+                    Name: XYZ
+                    Role: member
+                    Email: xyz@xyz
+                    __v: 0
+                  - _id: 63a47527873e6cf0cd3ce68d
+                    Name: ABC
+                    Role: member
+                    Email: ABC@abc
+                    __v: 0
+                  - _id: 63a4766f873e6cf0cd3ce690
+                    Name: PQR
+                    Role: member
+                    Email: pqr@pqr
+                    __v: 0
+                  - _id: 63a47704873e6cf0cd3ce693
+                    Name: EFG
+                    Role: member
+                    Email: efg@efg
+                    __v: 0
+                  - _id: 63a47770873e6cf0cd3ce696
+                    Name: Tina
+                    Role: member
+                    Email: tina@tina
+                    __v: 0
+                  - _id: 63a477f3873e6cf0cd3ce69b
+                    Name: Divya
+                    Role: member
+                    Email: divya@divya
+                    __v: 0
+                  - _id: 63a47871873e6cf0cd3ce69e
+                    Name: Riya
+                    Role: member
+                    Email: riya@riya
+                    __v: 0
+                  - _id: 63a4792e873e6cf0cd3ce6a1
+                    Name: Gita
+                    Role: member
+                    Email: gita@gita
+                    __v: 0
+                  - _id: 63a479b9873e6cf0cd3ce6a4
+                    Name: mita
+                    Role: member
+                    Email: mita@mita
+                    __v: 0
+                  - _id: 63a47a5d873e6cf0cd3ce6a7
+                    Name: Tanvi
+                    Role: member
+                    Email: tanvi@tanvi
+                    __v: 0
+                  - _id: 63a47a9c873e6cf0cd3ce6aa
+                    Name: aditi
+                    Role: member
+                    Email: aditi@aditi
+                    __v: 0
+                  - _id: 63a47c92873e6cf0cd3ce6ad
+                    Name: mit
+                    Role: member
+                    Email: mit@mit
+                    __v: 0
+                  - _id: 63a47d14873e6cf0cd3ce6b0
+                    Name: sakshi
+                    Role: member
+                    Email: sakshi@sakshi
+                    __v: 0
+                  - _id: 63a47d4a873e6cf0cd3ce6b3
+                    Name: shriya
+                    Role: member
+                    Email: shriya@sh
+                    __v: 0
+                  - _id: 63a540bd873e6cf0cd3ce6b6
+                    Name: Prachi
+                    Role: member
+                    Email: prachi@gmail.com
+                    __v: 0
+  /api/user/members:
+    get:
+      tags:
+        - User
+      summary: All Members
+      responses:
+        '200':
+          description: OK
+          headers:
+            X-Powered-By:
+              schema:
+                type: string
+                example: Express
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: '*'
+            Access-Control-Allow-Methods:
+              schema:
+                type: string
+                example: GET, POST
+            Access-Control-Allow-Headers:
+              schema:
+                type: string
+                example: Content-Type, Authorization
+            Content-Type:
+              schema:
+                type: string
+                example: application/json; charset=utf-8
+            Content-Length:
+              schema:
+                type: integer
+                example: '1444'
+            ETag:
+              schema:
+                type: string
+                example: W/"5a4-Nomed4k0No0dy8I/P/ldDmmhAFs"
+            Date:
+              schema:
+                type: string
+                example: Sat, 24 Dec 2022 11:54:18 GMT
+            Connection:
+              schema:
+                type: string
+                example: keep-alive
+            Keep-Alive:
+              schema:
+                type: string
+                example: timeout=5
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                message: 15 Users Found
+                Users:
+                  - _id: 63a45118e916ce60a0c9b8ed
+                    Name: XYZ
+                    Role: member
+                    Email: xyz@xyz
+                    __v: 0
+                  - _id: 63a47527873e6cf0cd3ce68d
+                    Name: ABC
+                    Role: member
+                    Email: ABC@abc
+                    __v: 0
+                  - _id: 63a4766f873e6cf0cd3ce690
+                    Name: PQR
+                    Role: member
+                    Email: pqr@pqr
+                    __v: 0
+                  - _id: 63a47704873e6cf0cd3ce693
+                    Name: EFG
+                    Role: member
+                    Email: efg@efg
+                    __v: 0
+                  - _id: 63a47770873e6cf0cd3ce696
+                    Name: Tina
+                    Role: member
+                    Email: tina@tina
+                    __v: 0
+                  - _id: 63a477f3873e6cf0cd3ce69b
+                    Name: Divya
+                    Role: member
+                    Email: divya@divya
+                    __v: 0
+                  - _id: 63a47871873e6cf0cd3ce69e
+                    Name: Riya
+                    Role: member
+                    Email: riya@riya
+                    __v: 0
+                  - _id: 63a4792e873e6cf0cd3ce6a1
+                    Name: Gita
+                    Role: member
+                    Email: gita@gita
+                    __v: 0
+                  - _id: 63a479b9873e6cf0cd3ce6a4
+                    Name: mita
+                    Role: member
+                    Email: mita@mita
+                    __v: 0
+                  - _id: 63a47a5d873e6cf0cd3ce6a7
+                    Name: Tanvi
+                    Role: member
+                    Email: tanvi@tanvi
+                    __v: 0
+                  - _id: 63a47a9c873e6cf0cd3ce6aa
+                    Name: aditi
+                    Role: member
+                    Email: aditi@aditi
+                    __v: 0
+                  - _id: 63a47c92873e6cf0cd3ce6ad
+                    Name: mit
+                    Role: member
+                    Email: mit@mit
+                    __v: 0
+                  - _id: 63a47d14873e6cf0cd3ce6b0
+                    Name: sakshi
+                    Role: member
+                    Email: sakshi@sakshi
+                    __v: 0
+                  - _id: 63a47d4a873e6cf0cd3ce6b3
+                    Name: shriya
+                    Role: member
+                    Email: shriya@sh
+                    __v: 0
+                  - _id: 63a540bd873e6cf0cd3ce6b6
+                    Name: Prachi
+                    Role: member
+                    Email: prachi@gmail.com
+                    __v: 0
+  /api/user/managers:
+    get:
+      tags:
+        - User
+      summary: All Managers
+      responses:
+        '200':
+          description: OK
+          headers:
+            X-Powered-By:
+              schema:
+                type: string
+                example: Express
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: '*'
+            Access-Control-Allow-Methods:
+              schema:
+                type: string
+                example: GET, POST
+            Access-Control-Allow-Headers:
+              schema:
+                type: string
+                example: Content-Type, Authorization
+            Content-Type:
+              schema:
+                type: string
+                example: application/json; charset=utf-8
+            Content-Length:
+              schema:
+                type: integer
+                example: '141'
+            ETag:
+              schema:
+                type: string
+                example: W/"8d-JwGpkAoWUv2VKZFftN9lX1WRUwI"
+            Date:
+              schema:
+                type: string
+                example: Sat, 24 Dec 2022 11:56:56 GMT
+            Connection:
+              schema:
+                type: string
+                example: keep-alive
+            Keep-Alive:
+              schema:
+                type: string
+                example: timeout=5
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                message: 1 Managers Found
+                Managers:
+                  - _id: 63a4395ead787e5a34c76399
+                    Name: Abhijeet
+                    Role: manager
+                    Email: test@test
+                    __v: 0
   /api/project/all:
     get:
       tags:
@@ -558,3 +887,274 @@ paths:
                   ProjectMangerName: Abhijeet
                   ProjectMangerEmail: test@test
                   _id: 63a433ed8c163fa81e7b77ba
+  /api/team/:
+    post:
+      tags:
+        - Team
+      summary: Add a new Team
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                TeamName: AFour Tech2
+                TeamStartDate: Thu Dec 22 2022 13:32:56 GMT+0530 (India Standard Time)
+                TeamLeadName: TL1
+                TeamLeadEmail: TL1@TL.com
+      responses:
+        '201':
+          description: Created
+          headers:
+            X-Powered-By:
+              schema:
+                type: string
+                example: Express
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: '*'
+            Access-Control-Allow-Methods:
+              schema:
+                type: string
+                example: GET, POST
+            Access-Control-Allow-Headers:
+              schema:
+                type: string
+                example: Content-Type, Authorization
+            Content-Type:
+              schema:
+                type: string
+                example: application/json; charset=utf-8
+            Content-Length:
+              schema:
+                type: integer
+                example: '224'
+            ETag:
+              schema:
+                type: string
+                example: W/"e0-OA9NisGQxMidIEr47M90U0uaMgE"
+            Date:
+              schema:
+                type: string
+                example: Sat, 24 Dec 2022 14:31:10 GMT
+            Connection:
+              schema:
+                type: string
+                example: keep-alive
+            Keep-Alive:
+              schema:
+                type: string
+                example: timeout=5
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                message: Team AFour Tech Created
+                newTeam:
+                  TeamName: AFour Tech
+                  TeamStartDate: '2022-12-22T08:02:56.000Z'
+                  TeamLeadName: TL1
+                  TeamLeadEmail: TL1@TL.com
+                  TeamMembers: []
+                  _id: 63a70d2e1db22d8adc6fb8ca
+                  __v: 0
+  /api/team/all:
+    get:
+      tags:
+        - Team
+      summary: Get all Teams
+      responses:
+        '200':
+          description: OK
+          headers:
+            X-Powered-By:
+              schema:
+                type: string
+                example: Express
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: '*'
+            Access-Control-Allow-Methods:
+              schema:
+                type: string
+                example: GET, POST
+            Access-Control-Allow-Headers:
+              schema:
+                type: string
+                example: Content-Type, Authorization
+            Content-Type:
+              schema:
+                type: string
+                example: application/json; charset=utf-8
+            Content-Length:
+              schema:
+                type: integer
+                example: '220'
+            ETag:
+              schema:
+                type: string
+                example: W/"dc-wzp6FqsvY7gqjcJ12JvWeu3kEBM"
+            Date:
+              schema:
+                type: string
+                example: Sat, 24 Dec 2022 14:31:40 GMT
+            Connection:
+              schema:
+                type: string
+                example: keep-alive
+            Keep-Alive:
+              schema:
+                type: string
+                example: timeout=5
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                message: Fetched all 1 Teams
+                teams:
+                  - _id: 63a70d2e1db22d8adc6fb8ca
+                    TeamName: AFour Tech
+                    TeamStartDate: '2022-12-22T08:02:56.000Z'
+                    TeamLeadName: TL1
+                    TeamLeadEmail: TL1@TL.com
+                    TeamMembers: []
+                    __v: 0
+  /api/team/63a70d2e1db22d8adc6fb8ca:
+    delete:
+      tags:
+        - Team
+      summary: Delete team by id
+      responses:
+        '202':
+          description: Accepted
+          headers:
+            X-Powered-By:
+              schema:
+                type: string
+                example: Express
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: '*'
+            Access-Control-Allow-Methods:
+              schema:
+                type: string
+                example: GET, POST
+            Access-Control-Allow-Headers:
+              schema:
+                type: string
+                example: Content-Type, Authorization
+            Content-Type:
+              schema:
+                type: string
+                example: application/json; charset=utf-8
+            Content-Length:
+              schema:
+                type: integer
+                example: '235'
+            ETag:
+              schema:
+                type: string
+                example: W/"eb-LnrcKShhC3rxC4eh0ar3xcK/lmQ"
+            Date:
+              schema:
+                type: string
+                example: Sat, 24 Dec 2022 14:31:52 GMT
+            Connection:
+              schema:
+                type: string
+                example: keep-alive
+            Keep-Alive:
+              schema:
+                type: string
+                example: timeout=5
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                message: Team 63a70d2e1db22d8adc6fb8ca Deleted
+                team:
+                  _id: 63a70d2e1db22d8adc6fb8ca
+                  TeamName: AFour Tech
+                  TeamStartDate: '2022-12-22T08:02:56.000Z'
+                  TeamLeadName: TL1
+                  TeamLeadEmail: TL1@TL.com
+                  TeamMembers: []
+                  __v: 0
+  /api/team/63a70d691db22d8adc6fb8d3:
+    put:
+      tags:
+        - Team
+      summary: Update Team by id
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                TeamName: AFour Tech 3
+                TeamMembers:
+                  - 63a540bd873e6cf0cd3ce6b6
+      responses:
+        '200':
+          description: OK
+          headers:
+            X-Powered-By:
+              schema:
+                type: string
+                example: Express
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: '*'
+            Access-Control-Allow-Methods:
+              schema:
+                type: string
+                example: GET, POST
+            Access-Control-Allow-Headers:
+              schema:
+                type: string
+                example: Content-Type, Authorization
+            Content-Type:
+              schema:
+                type: string
+                example: application/json; charset=utf-8
+            Content-Length:
+              schema:
+                type: integer
+                example: '244'
+            ETag:
+              schema:
+                type: string
+                example: W/"f4-S3Spdc5Rzw4XklPKCMnngTR5A2M"
+            Date:
+              schema:
+                type: string
+                example: Sat, 24 Dec 2022 15:13:43 GMT
+            Connection:
+              schema:
+                type: string
+                example: keep-alive
+            Keep-Alive:
+              schema:
+                type: string
+                example: timeout=5
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                message: Team 63a70d691db22d8adc6fb8d3 Updated
+                updatedTeam:
+                  _id: 63a70d691db22d8adc6fb8d3
+                  TeamName: AFour Tech 3
+                  TeamStartDate: '2022-12-22T08:02:56.000Z'
+                  TeamLeadName: TL1
+                  TeamLeadEmail: TL1@TL.com
+                  TeamMembers: []
+                  __v: 0

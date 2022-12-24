@@ -328,6 +328,273 @@
 							"body": "{\n    \"User\": {\n        \"_id\": \"63a3fd45dd73f9e86c7ac2a5\",\n        \"Name\": \"Abhijeet\",\n        \"Role\": \"manager\",\n        \"Email\": \"test@test\",\n        \"Password\": \"$2b$10$ULtOxD1EaEWwEML5k/Zo5O/TMqupBlCHXoAAAF7keDJFoDAAEQSQi\",\n        \"__v\": 0\n    },\n    \"message\": \"User Created !\",\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6InRlc3RAdGVzdCIsImlkIjoiNjNhM2ZkNDVkZDczZjllODZjN2FjMmE1IiwiaWF0IjoxNjcxNjkxNTk0fQ.5p8RQERQrQ1c1ot_NaF5pt4jyIsor8JcKaP7NJRnmyk\"\n}"
 						}
 					]
+				},
+				{
+					"name": "All Users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/user/all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"user",
+								"all"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "All Users",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/user/all",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"user",
+										"all"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET, POST"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Authorization"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1542"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"606-xS316vxGldtz1wWiNbbhR8Mc6+Y\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 24 Dec 2022 11:51:28 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"16 Users Found\",\n    \"Users\": [\n        {\n            \"_id\": \"63a4395ead787e5a34c76399\",\n            \"Name\": \"Abhijeet\",\n            \"Role\": \"manager\",\n            \"Email\": \"test@test\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"63a45118e916ce60a0c9b8ed\",\n            \"Name\": \"XYZ\",\n            \"Role\": \"member\",\n            \"Email\": \"xyz@xyz\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"63a47527873e6cf0cd3ce68d\",\n            \"Name\": \"ABC\",\n            \"Role\": \"member\",\n            \"Email\": \"ABC@abc\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"63a4766f873e6cf0cd3ce690\",\n            \"Name\": \"PQR\",\n            \"Role\": \"member\",\n            \"Email\": \"pqr@pqr\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"63a47704873e6cf0cd3ce693\",\n            \"Name\": \"EFG\",\n            \"Role\": \"member\",\n            \"Email\": \"efg@efg\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"63a47770873e6cf0cd3ce696\",\n            \"Name\": \"Tina\",\n            \"Role\": \"member\",\n            \"Email\": \"tina@tina\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"63a477f3873e6cf0cd3ce69b\",\n            \"Name\": \"Divya\",\n            \"Role\": \"member\",\n            \"Email\": \"divya@divya\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"63a47871873e6cf0cd3ce69e\",\n            \"Name\": \"Riya\",\n            \"Role\": \"member\",\n            \"Email\": \"riya@riya\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"63a4792e873e6cf0cd3ce6a1\",\n            \"Name\": \"Gita\",\n            \"Role\": \"member\",\n            \"Email\": \"gita@gita\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"63a479b9873e6cf0cd3ce6a4\",\n            \"Name\": \"mita\",\n            \"Role\": \"member\",\n            \"Email\": \"mita@mita\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"63a47a5d873e6cf0cd3ce6a7\",\n            \"Name\": \"Tanvi\",\n            \"Role\": \"member\",\n            \"Email\": \"tanvi@tanvi\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"63a47a9c873e6cf0cd3ce6aa\",\n            \"Name\": \"aditi\",\n            \"Role\": \"member\",\n            \"Email\": \"aditi@aditi\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"63a47c92873e6cf0cd3ce6ad\",\n            \"Name\": \"mit\",\n            \"Role\": \"member\",\n            \"Email\": \"mit@mit\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"63a47d14873e6cf0cd3ce6b0\",\n            \"Name\": \"sakshi\",\n            \"Role\": \"member\",\n            \"Email\": \"sakshi@sakshi\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"63a47d4a873e6cf0cd3ce6b3\",\n            \"Name\": \"shriya\",\n            \"Role\": \"member\",\n            \"Email\": \"shriya@sh\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"63a540bd873e6cf0cd3ce6b6\",\n            \"Name\": \"Prachi\",\n            \"Role\": \"member\",\n            \"Email\": \"prachi@gmail.com\",\n            \"__v\": 0\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "All Members",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/user/members",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"user",
+								"members"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "All Members",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/user/members",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"user",
+										"members"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET, POST"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Authorization"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1444"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"5a4-Nomed4k0No0dy8I/P/ldDmmhAFs\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 24 Dec 2022 11:54:18 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"15 Users Found\",\n    \"Users\": [\n        {\n            \"_id\": \"63a45118e916ce60a0c9b8ed\",\n            \"Name\": \"XYZ\",\n            \"Role\": \"member\",\n            \"Email\": \"xyz@xyz\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"63a47527873e6cf0cd3ce68d\",\n            \"Name\": \"ABC\",\n            \"Role\": \"member\",\n            \"Email\": \"ABC@abc\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"63a4766f873e6cf0cd3ce690\",\n            \"Name\": \"PQR\",\n            \"Role\": \"member\",\n            \"Email\": \"pqr@pqr\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"63a47704873e6cf0cd3ce693\",\n            \"Name\": \"EFG\",\n            \"Role\": \"member\",\n            \"Email\": \"efg@efg\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"63a47770873e6cf0cd3ce696\",\n            \"Name\": \"Tina\",\n            \"Role\": \"member\",\n            \"Email\": \"tina@tina\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"63a477f3873e6cf0cd3ce69b\",\n            \"Name\": \"Divya\",\n            \"Role\": \"member\",\n            \"Email\": \"divya@divya\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"63a47871873e6cf0cd3ce69e\",\n            \"Name\": \"Riya\",\n            \"Role\": \"member\",\n            \"Email\": \"riya@riya\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"63a4792e873e6cf0cd3ce6a1\",\n            \"Name\": \"Gita\",\n            \"Role\": \"member\",\n            \"Email\": \"gita@gita\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"63a479b9873e6cf0cd3ce6a4\",\n            \"Name\": \"mita\",\n            \"Role\": \"member\",\n            \"Email\": \"mita@mita\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"63a47a5d873e6cf0cd3ce6a7\",\n            \"Name\": \"Tanvi\",\n            \"Role\": \"member\",\n            \"Email\": \"tanvi@tanvi\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"63a47a9c873e6cf0cd3ce6aa\",\n            \"Name\": \"aditi\",\n            \"Role\": \"member\",\n            \"Email\": \"aditi@aditi\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"63a47c92873e6cf0cd3ce6ad\",\n            \"Name\": \"mit\",\n            \"Role\": \"member\",\n            \"Email\": \"mit@mit\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"63a47d14873e6cf0cd3ce6b0\",\n            \"Name\": \"sakshi\",\n            \"Role\": \"member\",\n            \"Email\": \"sakshi@sakshi\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"63a47d4a873e6cf0cd3ce6b3\",\n            \"Name\": \"shriya\",\n            \"Role\": \"member\",\n            \"Email\": \"shriya@sh\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"63a540bd873e6cf0cd3ce6b6\",\n            \"Name\": \"Prachi\",\n            \"Role\": \"member\",\n            \"Email\": \"prachi@gmail.com\",\n            \"__v\": 0\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "All Managers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/user/managers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"user",
+								"managers"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "All Managers",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/user/managers",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"user",
+										"managers"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET, POST"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Authorization"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "141"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"8d-JwGpkAoWUv2VKZFftN9lX1WRUwI\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 24 Dec 2022 11:56:56 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"1 Managers Found\",\n    \"Managers\": [\n        {\n            \"_id\": \"63a4395ead787e5a34c76399\",\n            \"Name\": \"Abhijeet\",\n            \"Role\": \"manager\",\n            \"Email\": \"test@test\",\n            \"__v\": 0\n        }\n    ]\n}"
+						}
+					]
 				}
 			]
 		},
@@ -915,6 +1182,403 @@
 							],
 							"cookie": [],
 							"body": "{\n    \"message\": \"Project 63a4331e2526c7a00441f208 Updated\",\n    \"newProject\": {\n        \"ProjectName\": \"Project 10\",\n        \"ProjectMangerName\": \"Abhijeet\",\n        \"ProjectMangerEmail\": \"test@test\",\n        \"_id\": \"63a433ed8c163fa81e7b77ba\"\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Team",
+			"item": [
+				{
+					"name": "Add a new Team",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"TeamName\": \"AFour Tech2\",\r\n    \"TeamStartDate\": \"Thu Dec 22 2022 13:32:56 GMT+0530 (India Standard Time)\",\r\n    \"TeamLeadName\": \"TL1\",\r\n    \"TeamLeadEmail\": \"TL1@TL.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/team/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"team",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Add a new Team",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"TeamName\": \"AFour Tech\",\r\n    \"TeamStartDate\": \"Thu Dec 22 2022 13:32:56 GMT+0530 (India Standard Time)\",\r\n    \"TeamLeadName\": \"TL1\",\r\n    \"TeamLeadEmail\": \"TL1@TL.com\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/team/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"team",
+										""
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET, POST"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Authorization"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "224"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"e0-OA9NisGQxMidIEr47M90U0uaMgE\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 24 Dec 2022 14:31:10 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Team AFour Tech Created\",\n    \"newTeam\": {\n        \"TeamName\": \"AFour Tech\",\n        \"TeamStartDate\": \"2022-12-22T08:02:56.000Z\",\n        \"TeamLeadName\": \"TL1\",\n        \"TeamLeadEmail\": \"TL1@TL.com\",\n        \"TeamMembers\": [],\n        \"_id\": \"63a70d2e1db22d8adc6fb8ca\",\n        \"__v\": 0\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Get all Teams",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/team/all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"team",
+								"all"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get all Teams",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/team/all",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"team",
+										"all"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET, POST"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Authorization"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "220"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"dc-wzp6FqsvY7gqjcJ12JvWeu3kEBM\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 24 Dec 2022 14:31:40 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Fetched all 1 Teams\",\n    \"teams\": [\n        {\n            \"_id\": \"63a70d2e1db22d8adc6fb8ca\",\n            \"TeamName\": \"AFour Tech\",\n            \"TeamStartDate\": \"2022-12-22T08:02:56.000Z\",\n            \"TeamLeadName\": \"TL1\",\n            \"TeamLeadEmail\": \"TL1@TL.com\",\n            \"TeamMembers\": [],\n            \"__v\": 0\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete team by id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/team/63a70d2e1db22d8adc6fb8ca",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"team",
+								"63a70d2e1db22d8adc6fb8ca"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Delete team by id",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/team/63a70d2e1db22d8adc6fb8ca",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"team",
+										"63a70d2e1db22d8adc6fb8ca"
+									]
+								}
+							},
+							"status": "Accepted",
+							"code": 202,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET, POST"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Authorization"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "235"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"eb-LnrcKShhC3rxC4eh0ar3xcK/lmQ\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 24 Dec 2022 14:31:52 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Team 63a70d2e1db22d8adc6fb8ca Deleted\",\n    \"team\": {\n        \"_id\": \"63a70d2e1db22d8adc6fb8ca\",\n        \"TeamName\": \"AFour Tech\",\n        \"TeamStartDate\": \"2022-12-22T08:02:56.000Z\",\n        \"TeamLeadName\": \"TL1\",\n        \"TeamLeadEmail\": \"TL1@TL.com\",\n        \"TeamMembers\": [],\n        \"__v\": 0\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Team by id",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"TeamName\": \"AFour Tech 3\",\r\n    \"TeamMembers\": [\"63a540bd873e6cf0cd3ce6b6\"]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/team/63a70d691db22d8adc6fb8d3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"team",
+								"63a70d691db22d8adc6fb8d3"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update Team by id",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"TeamName\": \"AFour Tech 3\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/team/63a70d691db22d8adc6fb8d3",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"team",
+										"63a70d691db22d8adc6fb8d3"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET, POST"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Authorization"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "244"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"f4-S3Spdc5Rzw4XklPKCMnngTR5A2M\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 24 Dec 2022 15:13:43 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Team 63a70d691db22d8adc6fb8d3 Updated\",\n    \"updatedTeam\": {\n        \"_id\": \"63a70d691db22d8adc6fb8d3\",\n        \"TeamName\": \"AFour Tech 3\",\n        \"TeamStartDate\": \"2022-12-22T08:02:56.000Z\",\n        \"TeamLeadName\": \"TL1\",\n        \"TeamLeadEmail\": \"TL1@TL.com\",\n        \"TeamMembers\": [],\n        \"__v\": 0\n    }\n}"
 						}
 					]
 				}
