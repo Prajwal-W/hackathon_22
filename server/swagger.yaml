@@ -110,10 +110,18 @@ paths:
               example:
                 message: User already exists
   /api/user/signin:
-    get:
+    post:
       tags:
         - User
       summary: Login User
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                Email: test@test
+                Password: abhi123
       responses:
         '201':
           description: Created
